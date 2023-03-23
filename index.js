@@ -9,3 +9,9 @@ for(var i =0; i<lis.length ; i++)
 {
     lis[i].style.fontWeight ="bold";
 }
+var li = document.getElementsByTagName('li');
+
+for(var i =0; i<li.length ; i++)
+{
+    li[i].style.color ="blue";
+}
