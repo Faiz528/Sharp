@@ -15,3 +15,7 @@ for(var i =0; i<li.length ; i++)
 {
     li[i].style.color ="blue";
 }
+var bc = document.querySelector('.list-group-item:nth-child(2)');
+bc.style.backgroundColor="green";
+var ls = document.querySelector('.list-group-item:nth-child(3)');
+ls.style.display="none";
