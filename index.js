@@ -19,3 +19,22 @@ var bc = document.querySelector('.list-group-item:nth-child(2)');
 bc.style.backgroundColor="green";
 var ls = document.querySelector('.list-group-item:nth-child(3)');
 ls.style.display="none";
+
+
+var newDiv = document.createElement('div');
+var text = document.createTextNode('Hello World');
+newDiv.appendChild(text);
+
+var container = document.querySelector('.container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv,h1);
+
+
+var newli =document.createElement('li');
+var text1 = document.createTextNode('Item 0');
+newli.appendChild(text1);
+newli.className='list-group';
+newli.id='items'
+
+var ul = document.querySelector('.list-group')
+ul.insertBefore(newli,li[0]);
