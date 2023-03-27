@@ -14,7 +14,12 @@
         <input type="email" name="emailid">
         <label for="">Id-no</label>
         <input type="text" name="num">
-        <button>Submit</button>
+        <button>Submit</button><ul>
+            
+        </ul>
+        <ul>
+            
+        </ul>
     </form>
     <script>
           function saveToLocalStorage(event){
@@ -22,9 +27,21 @@
             const name = event.target.username.value;
             const email = event.target.emailid.value;
             const id = event.target.num.value;
-            localStorage.setItem('name', name);
-            localStorage.setItem('email-Id', email);
-            localStorage.setItem('id-no', id);
+               let my ={
+                name :name,
+                 Email : email
+
+            }
+            localStorage.setItem(name ,JSON.stringify(my));
+            
+            var newli =document.createElement('li');
+             var text1 = document.createTextNode(name+"-"+email);
+            newli.appendChild(text1);
+            var ul = document.querySelector('ul');
+            ul.appendChild(newli);
+            //localStorage.setItem('name', name);
+            //localStorage.setItem('email-Id', email);
+            //localStorage.setItem('id-no', id);
           }
     </script>
 </body>
