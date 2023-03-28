@@ -39,6 +39,15 @@
             newli.appendChild(text1);
             var ul = document.querySelector('ul');
             ul.appendChild(newli);
+            const deletes = document.createElement('input');
+           deletes.type='button';
+           deletes.value="Delete";
+           newli.appendChild(deletes);
+            deletes.onclick= ()=> {
+               localStorage.removeItem(name);
+               ul.removeChild(newli);
+           }
+            
             //localStorage.setItem('name', name);
             //localStorage.setItem('email-Id', email);
             //localStorage.setItem('id-no', id);
